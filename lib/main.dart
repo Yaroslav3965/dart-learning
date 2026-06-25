@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 
 void main() {
   //runApp(const MyApp());
-  print("Hello World");
 }
-пш
-/*class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -121,4 +119,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-*/
