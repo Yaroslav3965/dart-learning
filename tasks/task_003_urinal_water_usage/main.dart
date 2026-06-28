@@ -9,7 +9,7 @@ void main() {
 }
 
 String getWaterStatus(int liters) {
-  if (liters < 0){
+  if (liters <= 0){
     return "error";
   }
   if (liters < 10) {
