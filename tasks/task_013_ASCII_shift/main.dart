@@ -1,4 +1,4 @@
-void main(){
+void main() {
   String text = 'ABC';
   int shift = 1;
 
@@ -9,9 +9,20 @@ void main(){
 
   StringBuffer encryptedText = StringBuffer();
 
-  for (int codeUnit in text.codeUnits){
+  for (int codeUnit in text.codeUnits) {
     int letterIndex = codeUnit + shift;
     encryptedText.write(String.fromCharCode(letterIndex));
   }
-  print(encryptedText.toString());
+  String cipherText = encryptedText.toString();
+  print('Encrypted: $cipherText');
+
+  //reverse
+  StringBuffer decryptedText = StringBuffer();
+
+  for (int codeUnit in cipherText.codeUnits) {
+    int decryptedIndex = codeUnit - shift;
+    decryptedText.write(String.fromCharCode(decryptedIndex));
+  }
+
+  print('Decrypted: ${decryptedText.toString()}');
 }
