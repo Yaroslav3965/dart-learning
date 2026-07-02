@@ -16,5 +16,19 @@
       encryptedText.write(String.fromCharCode(newCodeUnit));
     }
 
-    print(encryptedText.toString());
+    String cipherText = encryptedText.toString();
+    print('Encrypted: $cipherText');
+
+    // reverse
+
+    StringBuffer decryptedText = StringBuffer();
+
+    for (int codeUnit in cipherText.codeUnits) {
+      int letterIndex = codeUnit - 97;
+      int originalIndex = (letterIndex - shift + 26) % 26;
+      int originalCodeUnit = originalIndex + 97;
+      decryptedText.write(String.fromCharCode(originalCodeUnit));
+    }
+
+    print('Decrypted: ${decryptedText.toString()}');
   }
